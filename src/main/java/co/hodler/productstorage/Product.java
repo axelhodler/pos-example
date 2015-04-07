@@ -3,14 +3,14 @@ package co.hodler.productstorage;
 public class Product {
 
   private String id;
-  private String string;
+  private String price;
 
   public Product() {
   }
 
   public Product(String id, String price) {
     this.id = id;
-    this.string = price;
+    this.price = price;
   }
 
   public String getId() {
@@ -21,12 +21,12 @@ public class Product {
     this.id = id;
   }
 
-  public String getString() {
-    return string;
+  public String getPrice() {
+    return price;
   }
 
-  public void setString(String string) {
-    this.string = string;
+  public void setPrice(String price) {
+    this.price = price;
   }
 
 }
