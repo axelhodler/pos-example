@@ -10,6 +10,7 @@ public class DefaultBarcodeScanner implements BarcodeScanner {
     this.paymentProcessor = paymentProcessor;
   }
 
+  @Override
   public void onScan(String productCode) {
     paymentProcessor.buyProductBy(productCode);
   }
