@@ -12,6 +12,7 @@ import org.mockito.runners.MockitoJUnitRunner;
 
 import co.hodler.display.Display;
 import co.hodler.productstorage.Product;
+import co.hodler.productstorage.DefaultProductDAO;
 import co.hodler.productstorage.ProductDAO;
 import static org.mockito.Mockito.verify;
 

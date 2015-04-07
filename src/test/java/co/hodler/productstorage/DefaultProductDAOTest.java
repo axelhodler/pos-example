@@ -4,13 +4,13 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class ProductDAOTest {
+public class DefaultProductDAOTest {
 
   private static final String PRODUCT_CODE = "12345678";
 
   @Test
   public void find_product_retrieves_product() {
-    ProductDAO productDAO = new ProductDAO();
+    ProductDAO productDAO = new DefaultProductDAO();
 
     Product product = productDAO.findProductBy(PRODUCT_CODE);
 
