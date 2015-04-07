@@ -2,8 +2,8 @@ package co.hodler.productstorage;
 
 public class ProductDAO {
 
-  public void findProductBy(String productCode) {
-
+  public Product findProductBy(String productCode) {
+    return new Product();
   }
 
 }
