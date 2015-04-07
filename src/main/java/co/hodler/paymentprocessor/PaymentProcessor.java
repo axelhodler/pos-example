@@ -1,9 +1,17 @@
 package co.hodler.paymentprocessor;
 
+import co.hodler.productstorage.ProductDAO;
+
 public class PaymentProcessor {
 
+  private ProductDAO productDao;
+
+  public PaymentProcessor(ProductDAO productDao) {
+    this.productDao = productDao;
+  }
+
   public void buyProductBy(String productCode) {
-    // TODO Auto-generated method stub
+    productDao.findProductBy(productCode);
   }
 
 }
