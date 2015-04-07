@@ -17,7 +17,10 @@ public class PaymentProcessor {
   public void buyProductBy(String productCode) {
     Product p = productDao.findProductBy(productCode);
 
-    display.showPrice(p.getPrice());
+    if (p != null)
+      display.showPrice(p.getPrice());
+    else
+      display.showProductUnknown();
   }
 
 }

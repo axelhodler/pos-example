@@ -27,6 +27,7 @@ public class PaymentProcessorTest {
   PaymentProcessor paymentProcessor;
 
   private static final String PRODUCT_CODE = "12345";
+  private static final String UNKNOWN_PRODUCT_CODE = ":):):):)";
   private static final String PRICE = "$12.83";
 
   @Before
@@ -47,5 +48,14 @@ public class PaymentProcessorTest {
     paymentProcessor.buyProductBy(PRODUCT_CODE);
 
     verify(display).showPrice(PRICE);
+  }
+
+  @Test
+  public void display_message_if_product_not_found() {
+    given(productDao.findProductBy(UNKNOWN_PRODUCT_CODE)).willReturn(null);
+
+    paymentProcessor.buyProductBy(UNKNOWN_PRODUCT_CODE);
+
+    verify(display).showProductUnknown();
   }
 }
