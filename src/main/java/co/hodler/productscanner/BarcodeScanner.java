@@ -1,4 +1,4 @@
-package co.hodler;
+package co.hodler.productscanner;
 
 public interface BarcodeScanner {
 

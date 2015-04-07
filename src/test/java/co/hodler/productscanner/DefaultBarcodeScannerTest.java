@@ -1,6 +1,9 @@
-package co.hodler;
+package co.hodler.productscanner;
 
 import org.junit.Test;
+
+import co.hodler.productscanner.BarcodeScanner;
+import co.hodler.productscanner.DefaultBarcodeScanner;
 
 public class DefaultBarcodeScannerTest {
 
